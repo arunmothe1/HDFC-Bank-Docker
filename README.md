@@ -1,25 +1,29 @@
- - sudo yum install docker -y
+sudo yum install docker -y
 
- - systemctl start docker
- 
- - systemctl enable docker
- 
- - systemctl status docker
- 
- - mkdir -p /usr/local/lib/docker/cli-plugins
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
 
- - curl -fSL \
-    https://github.com/docker/buildx/releases/download/v0.34.1/buildx-v0.34.1.linux-amd64 \
-    -o /usr/local/lib/docker/cli-plugins/docker-buildx
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
 
- - chmod +x /usr/local/lib/docker/cli-plugins/docker-buildx
+sudo curl -fSL \
+https://github.com/docker/buildx/releases/download/v0.34.1/buildx-v0.34.1.linux-amd64 \
+-o /usr/local/lib/docker/cli-plugins/docker-buildx
 
- - docker compose version 
+sudo chmod +x /usr/local/lib/docker/cli-plugins
 
- - yum install git -y
- 
- - git clone https://github.com/Nitishkrsahu/HDFC-Bank-Docker
+sudo curl -SL \
+https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 \
+-o /usr/local/lib/docker/cli-plugins/docker-compose
 
- - cd HDFC-Bank-Docker
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
- - docker compose up -d --build
+docker compose version
+
+sudo yum install git -y
+
+git clone https://github.com/Nitishkrsahu/HDFC-Bank-Docker
+
+cd HDFC-Bank-Docker
+
+docker compose up -d --build
