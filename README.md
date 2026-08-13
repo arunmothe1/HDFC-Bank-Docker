@@ -1,8 +1,8 @@
-sudo yum install docker -y
+- sudo yum install docker -y
 
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo systemctl status docker
+- sudo systemctl start docker
+- sudo systemctl enable docker
+- sudo systemctl status docker
 
 sudo mkdir -p /usr/local/lib/docker/cli-plugins
 
